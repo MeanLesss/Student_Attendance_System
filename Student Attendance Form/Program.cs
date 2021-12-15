@@ -18,7 +18,9 @@ namespace Student_Attendance_Form
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login_Form());
-            Application.Run(new SignUpForm());
+            //Application.Run(new SignUpForm());
+            //Application.Run(new ForgotPasswordForm());
+            Application.Run(new Dashboard());
         }
     }
 }

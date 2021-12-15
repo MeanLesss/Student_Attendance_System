@@ -51,42 +51,47 @@ namespace Student_Attendance_Form
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(129, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(124, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(111, 114);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label_Username
             // 
             this.label_Username.AutoSize = true;
             this.label_Username.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_Username.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label_Username.Location = new System.Drawing.Point(47, 182);
+            this.label_Username.Location = new System.Drawing.Point(47, 174);
             this.label_Username.Name = "label_Username";
             this.label_Username.Size = new System.Drawing.Size(81, 21);
             this.label_Username.TabIndex = 1;
             this.label_Username.Text = "Username";
+            this.label_Username.Click += new System.EventHandler(this.label_Username_Click);
             // 
             // label_Password
             // 
             this.label_Password.AutoSize = true;
             this.label_Password.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_Password.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label_Password.Location = new System.Drawing.Point(47, 241);
+            this.label_Password.Location = new System.Drawing.Point(47, 236);
             this.label_Password.Name = "label_Password";
             this.label_Password.Size = new System.Drawing.Size(76, 21);
             this.label_Password.TabIndex = 2;
             this.label_Password.Text = "Password";
+            this.label_Password.Click += new System.EventHandler(this.label_Password_Click);
             // 
             // textBox_Username
             // 
             this.textBox_Username.Location = new System.Drawing.Point(47, 210);
             this.textBox_Username.Name = "textBox_Username";
-            this.textBox_Username.Size = new System.Drawing.Size(246, 23);
+            this.textBox_Username.Size = new System.Drawing.Size(265, 23);
             this.textBox_Username.TabIndex = 3;
+            this.textBox_Username.TextChanged += new System.EventHandler(this.textBox_Username_TextChanged);
             this.textBox_Username.Validating += new System.ComponentModel.CancelEventHandler(this.textBox_Username_Validating);
             // 
             // textBox_Password
@@ -95,7 +100,7 @@ namespace Student_Attendance_Form
             this.textBox_Password.MaxLength = 32;
             this.textBox_Password.Name = "textBox_Password";
             this.textBox_Password.PasswordChar = '*';
-            this.textBox_Password.Size = new System.Drawing.Size(246, 23);
+            this.textBox_Password.Size = new System.Drawing.Size(265, 23);
             this.textBox_Password.TabIndex = 4;
             this.textBox_Password.TextChanged += new System.EventHandler(this.textBox_Password_TextChanged);
             this.textBox_Password.Validating += new System.ComponentModel.CancelEventHandler(this.textBox_Password_Validating);
@@ -107,7 +112,7 @@ namespace Student_Attendance_Form
             this.button_Login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.button_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
             this.button_Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_Login.Location = new System.Drawing.Point(186, 318);
+            this.button_Login.Location = new System.Drawing.Point(205, 318);
             this.button_Login.Name = "button_Login";
             this.button_Login.Size = new System.Drawing.Size(107, 23);
             this.button_Login.TabIndex = 5;
@@ -134,7 +139,7 @@ namespace Student_Attendance_Form
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.Location = new System.Drawing.Point(123, 376);
+            this.linkLabel1.Location = new System.Drawing.Point(124, 377);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(117, 20);
             this.linkLabel1.TabIndex = 7;
@@ -165,11 +170,12 @@ namespace Student_Attendance_Form
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(88, 139);
+            this.label1.Location = new System.Drawing.Point(81, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Log into your account";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button_EyesClose
             // 
@@ -178,7 +184,7 @@ namespace Student_Attendance_Form
             this.button_EyesClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_EyesClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_EyesClose.FlatAppearance.BorderSize = 0;
-            this.button_EyesClose.Location = new System.Drawing.Point(263, 270);
+            this.button_EyesClose.Location = new System.Drawing.Point(282, 270);
             this.button_EyesClose.Name = "button_EyesClose";
             this.button_EyesClose.Size = new System.Drawing.Size(30, 23);
             this.button_EyesClose.TabIndex = 2;
@@ -192,7 +198,7 @@ namespace Student_Attendance_Form
             this.button_EyesOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_EyesOpen.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
             this.button_EyesOpen.FlatAppearance.BorderSize = 0;
-            this.button_EyesOpen.Location = new System.Drawing.Point(263, 269);
+            this.button_EyesOpen.Location = new System.Drawing.Point(282, 270);
             this.button_EyesOpen.Name = "button_EyesOpen";
             this.button_EyesOpen.Size = new System.Drawing.Size(30, 23);
             this.button_EyesOpen.TabIndex = 1;
@@ -214,6 +220,7 @@ namespace Student_Attendance_Form
             this.Name = "Login_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_Form_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

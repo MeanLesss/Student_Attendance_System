@@ -18,3 +18,7 @@ D:\IT STEP ACADEMY\Fundamentals of applications development with Window form\Hom
 D:\IT STEP ACADEMY\Fundamentals of applications development with Window form\Homework\Project\Student attendent project\Student Attendance Form\obj\Debug\net5.0-windows\Student Attendance Form.genruntimeconfig.cache
 D:\IT STEP ACADEMY\Fundamentals of applications development with Window form\Homework\Project\Student attendent project\Student Attendance Form\obj\Debug\net5.0-windows\Student_Attendance_Form.Login_Form.resources
 D:\IT STEP ACADEMY\Fundamentals of applications development with Window form\Homework\Project\Student attendent project\Student Attendance Form\obj\Debug\net5.0-windows\Student_Attendance_Form.SignUpForm.resources
+D:\IT STEP ACADEMY\Fundamentals of applications development with Window form\Homework\Project\Student attendent project\Student Attendance Form\obj\Debug\net5.0-windows\Student_Attendance_Form.ForgotPasswordForm.resources
+D:\IT STEP ACADEMY\Fundamentals of applications development with Window form\Homework\Project\Student attendent project\Student Attendance Form\obj\Debug\net5.0-windows\Student_Attendance_Form.Dashboard.resources
+D:\IT STEP ACADEMY\Fundamentals of applications development with Window form\Homework\Project\Student attendent project\Student Attendance Form\bin\Debug\net5.0-windows\FontAwesome.Sharp.dll
+D:\IT STEP ACADEMY\Fundamentals of applications development with Window form\Homework\Project\Student attendent project\Student Attendance Form\obj\Debug\net5.0-windows\Student Attendance Form.csproj.CopyComplete

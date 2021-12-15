@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dyDDzge6/foTcGwK3SWOJ5jH0k0WKTxEzRwjNcsHUrcms3HJpYNME4ID3d1vTo6aaDMW+O92cqG4ilyQrbPogA==",
+  "dgSpecHash": "W+ch2JHFwgJZS6U3+S4k5HdYfTsB2DyUgk4tAzJSMHozWy5OyJ2+A45iRnNqwMvJf70qqckn0hLNndySJDYLbQ==",
   "success": true,
   "projectFilePath": "D:\\IT STEP ACADEMY\\Fundamentals of applications development with Window form\\Homework\\Project\\Student attendent project\\Student Attendance Form\\Student Attendance Form.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\MEanLess\\.nuget\\packages\\fontawesome.sharp\\5.15.4\\fontawesome.sharp.5.15.4.nupkg.sha512"
+  ],
   "logs": []
 }

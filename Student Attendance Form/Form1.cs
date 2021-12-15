@@ -42,10 +42,7 @@ namespace Student_Attendance_Form
 
         private void textBox_Password_TextChanged(object sender, EventArgs e)
         {
-            if(textBox_Password.PasswordChar < 3)
-            {
-                
-            }
+            
         }
 
         private void textBox_Username_Validating(object sender, CancelEventArgs e)
@@ -83,7 +80,6 @@ namespace Student_Attendance_Form
                     e.Cancel = false;
                     errorProvider1.SetError(textBox_Password, null);
                 }
-
             }
         }
 
@@ -91,7 +87,6 @@ namespace Student_Attendance_Form
         {
             //need authentication first
             //check if the username and password match the file
-
 
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
@@ -101,10 +96,11 @@ namespace Student_Attendance_Form
 
         private void button_SignUp_Click(object sender, EventArgs e)
         {
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                //open sign up form
-            }
+
+            SignUpForm signUpForm = new SignUpForm();
+            this.Hide();
+            signUpForm.Show();
+
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -113,6 +109,36 @@ namespace Student_Attendance_Form
             {
                 //open forget password form
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Password_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Username_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_Username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

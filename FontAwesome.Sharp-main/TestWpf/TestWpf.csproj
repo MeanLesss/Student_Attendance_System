@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <SolutionDir Condition="'$(SolutionDir)' == ''">..\</SolutionDir>
+    </PropertyGroup>
+    <Import Project="$(SolutionDir)\solution.targets" />
+
+    <PropertyGroup>
+        <TargetFrameworks>net5.0-windows</TargetFrameworks>
+        <OutputType>WinExe</OutputType>
+        <UseWpf>true</UseWpf>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\FontAwesome.Sharp.Material\FontAwesome.Sharp.Material.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Resource Include="fonts\*.ttf" />
+    </ItemGroup>
+</Project>
