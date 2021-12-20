@@ -12,6 +12,7 @@ namespace Student_Attendance_Form
 {
     public partial class SignUpForm : Form
     {
+        private ManaageTeacher manageTeacher= new ManaageTeacher();
         public SignUpForm()
         {
             InitializeComponent();
@@ -79,16 +80,16 @@ namespace Student_Attendance_Form
 
         private void button_Cancel_Click(object sender, EventArgs e)
         {
-            /*this.Hide();*/
+            this.Hide();
             DialogResult = DialogResult.Cancel;
             Login_Form logInForm = new Login_Form();
             logInForm.Show(); 
-            Close();
+            /*this.Close();*/
         }
 
         private void label_NewUsername_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void textBox_NewPassword_Validating(object sender, CancelEventArgs e)
@@ -198,18 +199,40 @@ namespace Student_Attendance_Form
 
         private void button_Register_Click(object sender, EventArgs e)
         {
+
+            //need validation
+
+            manageTeacher.Teachers.Add(new Teacher
+            {
+                Username = textBox_NewUsername.Text,
+                Password = textBox_NewPassword.Text,
+                Phone = textBox_PhoneNumber.Text,
+                QuestionNo = comboBox_Question.SelectedIndex,
+                Answer = textBox_SecureAnswer.Text
+
+            }) ;
+            manageTeacher.SaveData();
             DialogResult = DialogResult.OK;
             Close();
-        }
-
-        private void SignUpForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void SignUpForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void SignUpForm_Load(object sender, EventArgs e)
+        {
+            manageTeacher.LoadData();
         }
     }
 }

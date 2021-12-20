@@ -12,6 +12,8 @@ namespace Student_Attendance_Form
 {
     public partial class Dashboard : Form
     {
+
+        public BindingSource BindingSource { get; set; } = new BindingSource();
         public Dashboard()
         {
             InitializeComponent();
@@ -26,6 +28,11 @@ namespace Student_Attendance_Form
         private void label1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

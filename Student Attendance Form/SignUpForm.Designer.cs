@@ -31,6 +31,7 @@ namespace Student_Attendance_Form
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.button_Register = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
             this.label_Question = new System.Windows.Forms.Label();
@@ -51,12 +52,15 @@ namespace Student_Attendance_Form
             this.label_NewUsername = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.comboBox_Question = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox_Question);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.button_Register);
             this.groupBox1.Controls.Add(this.button_Cancel);
             this.groupBox1.Controls.Add(this.label_Question);
@@ -82,6 +86,17 @@ namespace Student_Attendance_Form
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(328, 19);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(19, 21);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "X";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
             // button_Register
             // 
             this.button_Register.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -89,8 +104,10 @@ namespace Student_Attendance_Form
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button_Register.BackColor = System.Drawing.Color.LightYellow;
             this.button_Register.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_Register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button_Register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button_Register.FlatAppearance.BorderSize = 0;
+            this.button_Register.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button_Register.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Register.Font = new System.Drawing.Font("Thirteen Pixel Fonts", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Register.ForeColor = System.Drawing.Color.Purple;
             this.button_Register.Location = new System.Drawing.Point(206, 363);
@@ -105,6 +122,8 @@ namespace Student_Attendance_Form
             // button_Cancel
             // 
             this.button_Cancel.BackColor = System.Drawing.Color.Pink;
+            this.button_Cancel.FlatAppearance.BorderSize = 0;
+            this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Cancel.Font = new System.Drawing.Font("Thirteen Pixel Fonts", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Cancel.ForeColor = System.Drawing.Color.Navy;
             this.button_Cancel.Location = new System.Drawing.Point(33, 363);
@@ -118,7 +137,7 @@ namespace Student_Attendance_Form
             // label_Question
             // 
             this.label_Question.AutoSize = true;
-            this.label_Question.Location = new System.Drawing.Point(169, 294);
+            this.label_Question.Location = new System.Drawing.Point(152, 21);
             this.label_Question.Name = "label_Question";
             this.label_Question.Size = new System.Drawing.Size(139, 15);
             this.label_Question.TabIndex = 16;
@@ -295,6 +314,20 @@ namespace Student_Attendance_Form
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // comboBox_Question
+            // 
+            this.comboBox_Question.FormattingEnabled = true;
+            this.comboBox_Question.Items.AddRange(new object[] {
+            "sadsa",
+            "sd",
+            "fsaf",
+            "asf"});
+            this.comboBox_Question.Location = new System.Drawing.Point(169, 291);
+            this.comboBox_Question.Name = "comboBox_Question";
+            this.comboBox_Question.Size = new System.Drawing.Size(121, 23);
+            this.comboBox_Question.TabIndex = 20;
+            this.comboBox_Question.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // SignUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -303,7 +336,7 @@ namespace Student_Attendance_Form
             this.ClientSize = new System.Drawing.Size(377, 450);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign Up";
@@ -339,5 +372,7 @@ namespace Student_Attendance_Form
         private System.Windows.Forms.Button button_Cancel;
         private System.Windows.Forms.Button button_Register;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBox_Question;
     }
 }

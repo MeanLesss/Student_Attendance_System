@@ -30,7 +30,7 @@ namespace Student_Attendance_Form
         private void InitializeComponent()
         {
             this.panel_ByPhoneNumber = new System.Windows.Forms.Panel();
-            this.button_Confirm = new System.Windows.Forms.Button();
+            this.button_CheckPhone = new System.Windows.Forms.Button();
             this.textBox_OldPhoneNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_UsernamePhone = new System.Windows.Forms.TextBox();
@@ -39,17 +39,19 @@ namespace Student_Attendance_Form
             this.radioButton_PhoneNumber = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.panel_NewPassword = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox_NewPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_ConformPassword = new System.Windows.Forms.TextBox();
             this.panel_SecurityQuestion = new System.Windows.Forms.Panel();
-            this.button_ConfirmSecure = new System.Windows.Forms.Button();
+            this.button_CheckSecure = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_Answer = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_UsernameSecure = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel_ByPhoneNumber.SuspendLayout();
             this.panel_NewPassword.SuspendLayout();
             this.panel_SecurityQuestion.SuspendLayout();
@@ -57,7 +59,7 @@ namespace Student_Attendance_Form
             // 
             // panel_ByPhoneNumber
             // 
-            this.panel_ByPhoneNumber.Controls.Add(this.button_Confirm);
+            this.panel_ByPhoneNumber.Controls.Add(this.button_CheckPhone);
             this.panel_ByPhoneNumber.Controls.Add(this.textBox_OldPhoneNumber);
             this.panel_ByPhoneNumber.Controls.Add(this.label3);
             this.panel_ByPhoneNumber.Controls.Add(this.textBox_UsernamePhone);
@@ -67,15 +69,21 @@ namespace Student_Attendance_Form
             this.panel_ByPhoneNumber.Size = new System.Drawing.Size(352, 369);
             this.panel_ByPhoneNumber.TabIndex = 0;
             // 
-            // button_Confirm
+            // button_CheckPhone
             // 
-            this.button_Confirm.Location = new System.Drawing.Point(196, 220);
-            this.button_Confirm.Name = "button_Confirm";
-            this.button_Confirm.Size = new System.Drawing.Size(115, 32);
-            this.button_Confirm.TabIndex = 4;
-            this.button_Confirm.Text = "Confirm";
-            this.button_Confirm.UseVisualStyleBackColor = true;
-            this.button_Confirm.Click += new System.EventHandler(this.button_Confirm_Click);
+            this.button_CheckPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button_CheckPhone.FlatAppearance.BorderSize = 0;
+            this.button_CheckPhone.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_CheckPhone.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_CheckPhone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_CheckPhone.Font = new System.Drawing.Font("Thirteen Pixel Fonts", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_CheckPhone.Location = new System.Drawing.Point(196, 222);
+            this.button_CheckPhone.Name = "button_CheckPhone";
+            this.button_CheckPhone.Size = new System.Drawing.Size(115, 32);
+            this.button_CheckPhone.TabIndex = 4;
+            this.button_CheckPhone.Text = "Check";
+            this.button_CheckPhone.UseVisualStyleBackColor = false;
+            this.button_CheckPhone.Click += new System.EventHandler(this.button_Confirm_Click);
             // 
             // textBox_OldPhoneNumber
             // 
@@ -152,6 +160,7 @@ namespace Student_Attendance_Form
             // 
             // panel_NewPassword
             // 
+            this.panel_NewPassword.Controls.Add(this.button1);
             this.panel_NewPassword.Controls.Add(this.label6);
             this.panel_NewPassword.Controls.Add(this.label4);
             this.panel_NewPassword.Controls.Add(this.textBox_NewPassword);
@@ -161,6 +170,21 @@ namespace Student_Attendance_Form
             this.panel_NewPassword.Name = "panel_NewPassword";
             this.panel_NewPassword.Size = new System.Drawing.Size(353, 366);
             this.panel_NewPassword.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Fuchsia;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Fuchsia;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Thirteen Pixel Fonts", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(179, 279);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 37);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Change password";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -211,7 +235,7 @@ namespace Student_Attendance_Form
             // 
             // panel_SecurityQuestion
             // 
-            this.panel_SecurityQuestion.Controls.Add(this.button_ConfirmSecure);
+            this.panel_SecurityQuestion.Controls.Add(this.button_CheckSecure);
             this.panel_SecurityQuestion.Controls.Add(this.label8);
             this.panel_SecurityQuestion.Controls.Add(this.textBox_Answer);
             this.panel_SecurityQuestion.Controls.Add(this.label7);
@@ -221,15 +245,21 @@ namespace Student_Attendance_Form
             this.panel_SecurityQuestion.Size = new System.Drawing.Size(364, 366);
             this.panel_SecurityQuestion.TabIndex = 5;
             // 
-            // button_ConfirmSecure
+            // button_CheckSecure
             // 
-            this.button_ConfirmSecure.Location = new System.Drawing.Point(197, 206);
-            this.button_ConfirmSecure.Name = "button_ConfirmSecure";
-            this.button_ConfirmSecure.Size = new System.Drawing.Size(115, 32);
-            this.button_ConfirmSecure.TabIndex = 5;
-            this.button_ConfirmSecure.Text = "Confirm";
-            this.button_ConfirmSecure.UseVisualStyleBackColor = true;
-            this.button_ConfirmSecure.Click += new System.EventHandler(this.button_ConfirmSecure_Click);
+            this.button_CheckSecure.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button_CheckSecure.FlatAppearance.BorderSize = 0;
+            this.button_CheckSecure.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_CheckSecure.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button_CheckSecure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_CheckSecure.Font = new System.Drawing.Font("Thirteen Pixel Fonts", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_CheckSecure.Location = new System.Drawing.Point(197, 206);
+            this.button_CheckSecure.Name = "button_CheckSecure";
+            this.button_CheckSecure.Size = new System.Drawing.Size(115, 32);
+            this.button_CheckSecure.TabIndex = 5;
+            this.button_CheckSecure.Text = "Check";
+            this.button_CheckSecure.UseVisualStyleBackColor = false;
+            this.button_CheckSecure.Click += new System.EventHandler(this.button_ConfirmSecure_Click);
             // 
             // label8
             // 
@@ -269,19 +299,32 @@ namespace Student_Attendance_Form
             this.textBox_UsernameSecure.TabIndex = 0;
             this.textBox_UsernameSecure.TextChanged += new System.EventHandler(this.textBox_UsernameSecure_TextChanged);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label9.Location = new System.Drawing.Point(346, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(19, 21);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "X";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // ForgotPasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(377, 450);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.radioButton_PhoneNumber);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel_SecurityQuestion);
             this.Controls.Add(this.panel_ByPhoneNumber);
             this.Controls.Add(this.panel_NewPassword);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgotPasswordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Forgot Password";
@@ -312,12 +355,14 @@ namespace Student_Attendance_Form
         private System.Windows.Forms.TextBox textBox_NewPassword;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button_Confirm;
+        private System.Windows.Forms.Button button_CheckPhone;
         private System.Windows.Forms.Panel panel_SecurityQuestion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox_Answer;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox_UsernameSecure;
-        private System.Windows.Forms.Button button_ConfirmSecure;
+        private System.Windows.Forms.Button button_CheckSecure;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button1;
     }
 }

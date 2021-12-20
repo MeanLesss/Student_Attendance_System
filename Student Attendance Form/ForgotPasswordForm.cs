@@ -68,6 +68,9 @@ namespace Student_Attendance_Form
             panel_NewPassword.Visible = true;//just testing
         }
 
-        
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

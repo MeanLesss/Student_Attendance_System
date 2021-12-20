@@ -38,8 +38,9 @@ namespace Student_Attendance_Form
             this.textBox_Password = new System.Windows.Forms.TextBox();
             this.button_Login = new System.Windows.Forms.Button();
             this.button_SignUp = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_ForgetPass = new System.Windows.Forms.LinkLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button_EyesClose = new System.Windows.Forms.Button();
             this.button_EyesOpen = new System.Windows.Forms.Button();
@@ -109,12 +110,14 @@ namespace Student_Attendance_Form
             // 
             this.button_Login.BackColor = System.Drawing.Color.MintCream;
             this.button_Login.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button_Login.FlatAppearance.BorderSize = 0;
             this.button_Login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.button_Login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.button_Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Login.Font = new System.Drawing.Font("Thirteen Pixel Fonts", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Login.Location = new System.Drawing.Point(205, 318);
             this.button_Login.Name = "button_Login";
-            this.button_Login.Size = new System.Drawing.Size(107, 23);
+            this.button_Login.Size = new System.Drawing.Size(107, 37);
             this.button_Login.TabIndex = 5;
             this.button_Login.Text = "Login";
             this.button_Login.UseVisualStyleBackColor = false;
@@ -123,36 +126,40 @@ namespace Student_Attendance_Form
             // button_SignUp
             // 
             this.button_SignUp.BackColor = System.Drawing.Color.MintCream;
+            this.button_SignUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button_SignUp.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.button_SignUp.FlatAppearance.BorderSize = 0;
             this.button_SignUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
             this.button_SignUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.button_SignUp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_SignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_SignUp.Font = new System.Drawing.Font("Thirteen Pixel Fonts", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_SignUp.Location = new System.Drawing.Point(47, 318);
             this.button_SignUp.Name = "button_SignUp";
-            this.button_SignUp.Size = new System.Drawing.Size(107, 23);
+            this.button_SignUp.Size = new System.Drawing.Size(107, 37);
             this.button_SignUp.TabIndex = 6;
             this.button_SignUp.Text = "Sign up";
             this.button_SignUp.UseVisualStyleBackColor = false;
             this.button_SignUp.Click += new System.EventHandler(this.button_SignUp_Click);
             // 
-            // linkLabel1
+            // linkLabel_ForgetPass
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.Location = new System.Drawing.Point(124, 377);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(117, 20);
-            this.linkLabel1.TabIndex = 7;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Forget Password";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel_ForgetPass.AutoSize = true;
+            this.linkLabel_ForgetPass.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.linkLabel_ForgetPass.Location = new System.Drawing.Point(124, 377);
+            this.linkLabel_ForgetPass.Name = "linkLabel_ForgetPass";
+            this.linkLabel_ForgetPass.Size = new System.Drawing.Size(117, 20);
+            this.linkLabel_ForgetPass.TabIndex = 7;
+            this.linkLabel_ForgetPass.TabStop = true;
+            this.linkLabel_ForgetPass.Text = "Forget Password";
+            this.linkLabel_ForgetPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_ForgetPass_LinkClicked);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button_Login);
             this.groupBox1.Controls.Add(this.button_SignUp);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.linkLabel1);
+            this.groupBox1.Controls.Add(this.linkLabel_ForgetPass);
             this.groupBox1.Controls.Add(this.label_Password);
             this.groupBox1.Controls.Add(this.button_EyesClose);
             this.groupBox1.Controls.Add(this.label_Username);
@@ -165,6 +172,18 @@ namespace Student_Attendance_Form
             this.groupBox1.Size = new System.Drawing.Size(353, 437);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.Location = new System.Drawing.Point(328, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 21);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -184,7 +203,7 @@ namespace Student_Attendance_Form
             this.button_EyesClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_EyesClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_EyesClose.FlatAppearance.BorderSize = 0;
-            this.button_EyesClose.Location = new System.Drawing.Point(282, 270);
+            this.button_EyesClose.Location = new System.Drawing.Point(283, 143);
             this.button_EyesClose.Name = "button_EyesClose";
             this.button_EyesClose.Size = new System.Drawing.Size(30, 23);
             this.button_EyesClose.TabIndex = 2;
@@ -198,7 +217,7 @@ namespace Student_Attendance_Form
             this.button_EyesOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_EyesOpen.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
             this.button_EyesOpen.FlatAppearance.BorderSize = 0;
-            this.button_EyesOpen.Location = new System.Drawing.Point(282, 270);
+            this.button_EyesOpen.Location = new System.Drawing.Point(283, 181);
             this.button_EyesOpen.Name = "button_EyesOpen";
             this.button_EyesOpen.Size = new System.Drawing.Size(30, 23);
             this.button_EyesOpen.TabIndex = 1;
@@ -216,7 +235,7 @@ namespace Student_Attendance_Form
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(377, 450);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
@@ -239,12 +258,13 @@ namespace Student_Attendance_Form
         private System.Windows.Forms.TextBox textBox_Password;
         private System.Windows.Forms.Button button_Login;
         private System.Windows.Forms.Button button_SignUp;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel_ForgetPass;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button_EyesOpen;
         private System.Windows.Forms.Button button_EyesClose;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

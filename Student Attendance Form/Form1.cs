@@ -12,6 +12,12 @@ namespace Student_Attendance_Form
 {
     public partial class Login_Form : Form
     {
+        private Teacher teacher = new Teacher();
+        private ManaageTeacher manageTeacher = new ManaageTeacher();
+        private bool correct;
+
+
+
         public Login_Form()
         {
             InitializeComponent();
@@ -19,7 +25,7 @@ namespace Student_Attendance_Form
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            manageTeacher.LoadData();
         }
 
         private void button_EyesClose_Click(object sender, EventArgs e)
@@ -83,20 +89,52 @@ namespace Student_Attendance_Form
             }
         }
 
+        private bool Authentication()
+        {
+            manageTeacher.LoadData();
+
+
+            Teacher teacher = manageTeacher.Teachers.Find(
+            t => t.Username == textBox_Username.Text &&
+            t.Username == textBox_Password.Text);
+            correct = true;
+
+            if(textBox_Username.Text == teacher.Username &&
+                textBox_Password.Text
+             == teacher.Username)
+            {
+                correct = true;
+            }
+            else
+            {
+                correct = false;
+            }
+            
+            return correct;
+
+        }
+
         private void button_Login_Click(object sender, EventArgs e)
         {
-            //need authentication first
-            //check if the username and password match the file
+            bool authentication = Authentication();
 
-            if (ValidateChildren(ValidationConstraints.Enabled))
+            if(authentication == true)
             {
-                //open other form
+                manageTeacher.LoadData();
+                new Dashboard().Show();
             }
+            else
+            {
+                textBox_Username.Clear();
+                textBox_Password.Clear();
+                MessageBox.Show("Username or Password not found","Login failed");
+            }
+            //Close();
         }
 
         private void button_SignUp_Click(object sender, EventArgs e)
         {
-
+            manageTeacher.LoadData();
             SignUpForm signUpForm = new SignUpForm();
             this.Hide();
             signUpForm.Show();
@@ -105,10 +143,7 @@ namespace Student_Attendance_Form
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                //open forget password form
-            }
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -139,6 +174,20 @@ namespace Student_Attendance_Form
         private void Login_Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void linkLabel_ForgetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
+
+            manageTeacher.LoadData();
+            this.Hide();
+            forgotPasswordForm.Show();
         }
     }
 }
