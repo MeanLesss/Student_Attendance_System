@@ -15,7 +15,7 @@ namespace Student_Attendance_Form
         private Teacher teacher = new Teacher();
         private ManaageTeacher manageTeacher = new ManaageTeacher();
         private bool correct;
-
+        public bool IsLogin { get; set; } = false;
 
 
         public Login_Form()
@@ -28,27 +28,22 @@ namespace Student_Attendance_Form
             manageTeacher.LoadData();
         }
 
-        private void button_EyesClose_Click(object sender, EventArgs e)
+        private void iconButton_EyeClose_Click(object sender, EventArgs e)
         {
-            if(textBox_Password.PasswordChar == '*')
+            if (textBox_Password.PasswordChar == '*')
             {
-                button_EyesOpen.BringToFront();
+                iconButton_EyeOpen.BringToFront();
                 textBox_Password.PasswordChar = '\0';
             }
         }
 
-        private void button_EyesOpen_Click(object sender, EventArgs e)
+        private void iconButton_EyeOpen_Click(object sender, EventArgs e)
         {
             if (textBox_Password.PasswordChar == '\0')
             {
-                button_EyesClose.BringToFront();
+                iconButton_EyeClose.BringToFront();
                 textBox_Password.PasswordChar = '*';
             }
-        }
-
-        private void textBox_Password_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void textBox_Username_Validating(object sender, CancelEventArgs e)
@@ -116,29 +111,15 @@ namespace Student_Attendance_Form
 
         private void button_Login_Click(object sender, EventArgs e)
         {
-            bool authentication = Authentication();
 
-            if(authentication == true)
-            {
-                manageTeacher.LoadData();
-                new Dashboard().Show();
-            }
-            else
-            {
-                textBox_Username.Clear();
-                textBox_Password.Clear();
-                MessageBox.Show("Username or Password not found","Login failed");
-            }
-            //Close();
         }
 
-        private void button_SignUp_Click(object sender, EventArgs e)
+        private void iconButton_SignUp_Click(object sender, EventArgs e)
         {
             manageTeacher.LoadData();
             SignUpForm signUpForm = new SignUpForm();
             this.Hide();
             signUpForm.Show();
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -147,26 +128,6 @@ namespace Student_Attendance_Form
         }
 
         private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_Password_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label_Username_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox_Username_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -188,6 +149,26 @@ namespace Student_Attendance_Form
             manageTeacher.LoadData();
             this.Hide();
             forgotPasswordForm.Show();
+        }
+
+        private void iconButton_Login_Click(object sender, EventArgs e)
+        {
+            Teacher teacher = manageTeacher.Teachers.Find(
+                t => t.Username == textBox_Username.Text &&
+                t.Password == textBox_Password.Text);
+
+            textBox_Username.Clear();
+            textBox_Password.Clear();
+
+            if (teacher != null)
+            {
+                IsLogin = true;
+                new Dashboard(teacher).Show();
+                this.Hide();
+            }else
+            {
+                MessageBox.Show("User not found!", "Log in failed");
+            }
         }
     }
 }

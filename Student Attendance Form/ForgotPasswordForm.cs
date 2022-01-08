@@ -58,6 +58,7 @@ namespace Student_Attendance_Form
         {
             panel_SecurityQuestion.Visible = false;
             panel_ByPhoneNumber.Visible = false;
+            //neeed more code here
             panel_NewPassword.Visible = true;//jusst testing
         }
 
@@ -65,6 +66,7 @@ namespace Student_Attendance_Form
         {
             panel_SecurityQuestion.Visible = false;
             panel_ByPhoneNumber.Visible = false;
+            //need more code here
             panel_NewPassword.Visible = true;//just testing
         }
 

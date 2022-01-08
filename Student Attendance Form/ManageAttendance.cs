@@ -41,10 +41,13 @@ namespace Student_Attendance_Form
                      let x = t.Split(',')
                      select new Attendance
                      {
-                         Avatar = Image.FromFile(x[0]),
+                         Path = x[0],
                          Name = x[1],
                          Status = x[2],
                          Remark = x[3],
+                         Subject = x[4],
+                         Session = int.Parse(x[5]),
+                         Date = DateTime.Parse(x[6])
                      };
             attendances.Clear();
             int i = 1;
@@ -61,11 +64,11 @@ namespace Student_Attendance_Form
             {
                 using (var sw = new StreamWriter(fs))
                 {
-                    sw.WriteLine("Avatar,Name,Status,Remark");
+                    sw.WriteLine("Avatar,Name,Status,Remark,Subject,Session,Date");
                     foreach (var t in attendances)
                     {
-                        sw.WriteLine($"{t.Avatar},{t.Name},{t.Status}," +
-                            $"{t.Remark}");
+                        sw.WriteLine($"{t.Path},{t.Name},{t.Status},"
+                            + $"{t.Remark},{t.Subject},{t.Session},{t.Date.ToShortDateString()}");
                     }
                 }
             }
